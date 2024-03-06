@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "restaraunts",
+  "info": {
+    "singularName": "restaraunt",
+    "pluralName": "restaraunts",
+    "displayName": "Restaraunt"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Description": {
+      "type": "blocks"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "mappedBy": "restaraunts"
+    }
+  }
+}
